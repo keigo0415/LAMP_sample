@@ -97,9 +97,25 @@ try {
             </tr>
         </table>
         </div>
-        <div id="tab2" class="tab-pane">sample2</div>
-        <div id="tab3" class="tab-pane">sample3</div>
-        <div id="tab4" class="tab-pane">sample4</div>
+        <div id="tab2" class="tab-pane">
+            <form action="./insert.php" method="POST">
+                    <div class="form-group">
+                        <label for="id">id</label>
+                        <input class="form-control" type="text" name="id" id="id">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">name</label>
+                        <input class="form-control" type="text" name="name" id="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="age">age</label>
+                        <input class="form-control" type="text" name="age" id="age">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Insert</button>
+            </form>
+        </div>
+        <div id="tab3" class="tab-pane"></div>
+        <div id="tab4" class="tab-pane"></div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
