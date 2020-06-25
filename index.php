@@ -46,6 +46,29 @@ try {
         </div>
     </div>
     <div class="containar">
+        <?php if($_GET['fg']==1){<?
+            <div class="alert alert-primary alert-dismissible fade show" role="alert">
+            Processing is complete<strong>Sucess!!</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+           
+
+            <?php}else if($_GET['fg']==2){<?
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    Processing is fatail<strong>Fatail!</strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            <?php}
+        
+        
+    
+    </div>
+
+    <div class="containar">
         <ul class="nav nav-tabs">
             <li class="nav-item">
                 <a href="#tab1" class="nav-link active" data-toggle="tab">Select</a>

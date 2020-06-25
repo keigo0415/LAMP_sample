@@ -20,7 +20,7 @@ try {
     header('Location:index.php?fg=1');
 } catch (PDOException $e) {
     //echo "接続失敗: " . $e->getMessage() . "\n";
-    header('Location:index.php?fg=1?');
+    header('Location:index.php?fg=2?'. $e->getMessanger());
     exit();
 }
 
