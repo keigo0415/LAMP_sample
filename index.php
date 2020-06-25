@@ -128,7 +128,7 @@ try {
                         <label for="age">age</label>
                         <input class="form-control" type="text" name="age" id="age">
                     </div>
-                    <button type="submit" class="btn btn-primary">Insert</button>
+                    <button type="submit" class="btn btn-primary">Update</button>
             </form></div>
         <div id="tab4" class="tab-pane"></div>
     </div>
