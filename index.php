@@ -7,6 +7,7 @@ try {
 
     $sql="select * from user";
     $result=$dbh->query($sql);
+    $dellist=$dbh->query($sql);
 
     echo "接続成功\n";
 } catch (PDOException $e) {
@@ -130,7 +131,32 @@ try {
                     </div>
                     <button type="submit" class="btn btn-primary">Update</button>
             </form></div>
-        <div id="tab4" class="tab-pane"></div>
+        <div id="tab4" class="tab-pane">
+        <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach($result as $value){?>
+                
+                    <tr>
+                        <th><?php echo "$value[id]"?></th>
+                        <th><?php echo "$value[name]"?></th>
+                        <th><?php echo "$value[age]"?></th>
+                        <td>
+                            <form action="./delete.php" method="$_GET">
+                                <input type="text" class="d-none" name="id" value="<?php echo $value[id] ?>">
+                                <button type="submit" 
+                            </form>
+                        </td>
+                    </tr>
+                <?php}?>
+        
+        
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
